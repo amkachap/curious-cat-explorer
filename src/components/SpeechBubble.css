@@ -1,0 +1,98 @@
+.speech-bubble-container {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.speech-bubble {
+  position: relative;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  min-width: 200px;
+  max-width: 320px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-family: 'IBM Plex Mono', monospace;
+  white-space: pre-wrap;
+  pointer-events: auto;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.speech-bubble.species {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #333;
+}
+
+.speech-bubble.species::after {
+  bottom: auto;
+  top: -12px;
+  border-top: none;
+  border-bottom: 12px solid #333;
+}
+
+.speech-bubble.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.speech-bubble.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

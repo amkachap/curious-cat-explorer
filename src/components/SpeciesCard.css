@@ -1,0 +1,112 @@
+.species-card {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.species-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.species-card::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.species-card::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.species-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.species-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conversation-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.learn-more-button {
+  padding: 1rem 2rem;
+  background: #F25C6E;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  max-width: 500px;
+  width: 90%;
+}
+
+.learn-more-button:hover {
+  background: #e54d5f;
+  transform: translateY(-2px);
+}
+
+.species-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.species-options button {
+  padding: 1rem;
+  background: #f0f0f0;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'IBM Plex Mono', monospace;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.species-options button:hover {
+  background: #e0e0e0;
+  transform: translateY(-5px);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #F25C6E;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  max-width: 500px;
+  width: 90%;
+  font-size: 1.1rem;
+}
